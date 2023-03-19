@@ -1,23 +1,24 @@
-export default function pattern001(context, width, height, inputs) {
-  context.lineWidth = width * 0.005;
-
+export default function design001(context: any, width: number, height: number, inputs: any) {
   const invert = inputs?.invert;
+
+  const mux = (width || height) / 500;
 
   context.strokeStyle = invert ? "white" : "black";
   context.fillStyle = invert ? "black" : "white";
   context.fillRect(0, 0, width, height);
+  context.lineWidth = 5 * mux;
 
   const cols = 5;
   const rows = 5;
 
-  const x = width * 0.19;
-  const y = height * 0.19;
+  const x = 10 * mux;
+  const y = 10 * mux;
 
-  const w = width * 0.10;
-  const h = height * 0.10;
+  const w = (400 / 5) * mux;
+  const h = (400 / 5) * mux;
 
-  const gapCols = width * 0.025;
-  const gapRows = height * 0.025;
+  const gapCols = 20 * mux;
+  const gapRows = 20 * mux;
 
   for (let i = 0; i < cols; i++) {
     for (let j = 0; j < rows; j++) {
