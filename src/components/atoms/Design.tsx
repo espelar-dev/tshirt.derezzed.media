@@ -2,6 +2,13 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import designs from "../../designs";
 
+const inputs: any = {
+  design001: {
+    invert: false
+  },
+  design002: {}
+};
+
 function drawdesign(id: string, inputs?: any) {
   var canvas = document.querySelector("canvas");
 
@@ -18,11 +25,9 @@ function drawdesign(id: string, inputs?: any) {
 const Design = ({ id }) => {
   const canvasProps = { width: 500, height: 500 };
 
-  const inputs = { invert: false };
-
   useEffect(() => {
     if (id && typeof id === "string") {
-      drawdesign(id, inputs);
+      drawdesign(id, inputs[id]);
     }
   });
 
