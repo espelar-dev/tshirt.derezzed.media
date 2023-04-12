@@ -1,0 +1,14 @@
+{
+  "editor.detectIndentation": false,
+  "editor.defaultFormatter": "vscode.typescript-language-features",
+  "editor.mouseWheelZoom": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.validate": ["typescript", "typescriptreact", "javascript", "javascriptreact"]
+}

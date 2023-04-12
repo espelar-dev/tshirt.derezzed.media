@@ -3,7 +3,7 @@ import Design from "@/components/atoms/Design";
 
 const DesignPage = () => {
   const router = useRouter();
-  const { id } = router.query || "";
+  const { id } =router.query || ""
 
   return (
     <>

@@ -1,0 +1,59 @@
+.navbarContainer {
+  /* display: flex; */
+  padding:10px;
+}
+
+.navlogoContainer {
+  display: flex;
+}
+
+.navlogo {
+  align-items: flext-start;
+  margin-right: auto;
+}
+
+.navlinkContainer {
+  display: flex;
+}
+
+.navlink {
+  align-items: space-between;
+  margin: auto;
+}
+
+.naviconContainer {
+  display: flex;
+}
+
+.navicon {
+  align-items: flext-end;
+  margin-left: auto;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .navbarContainer {
+    max-height: 18vh;
+  }  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .navbarContainer {
+    max-height: 16vh;
+  }  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .navbarContainer {
+    max-height: 8vh;
+  }  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .navbarContainer {
+    max-height: 8vh;
+  }  
+}

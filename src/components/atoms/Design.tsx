@@ -2,32 +2,41 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import designs from "../../designs";
 
-const inputs: any = {
+export type InputValues = {
+  invert?: boolean;
+}
+
+export type Input = Record<string, InputValues>
+
+const inputs: Input = {
   design001: {
     invert: false
   },
   design002: {}
 };
 
-function drawdesign(id: string, inputs?: any) {
-  var canvas = document.querySelector("canvas");
+function drawdesign(id: string, inputs: InputValues) {
+  var canvas: HTMLCanvasElement | null = document.querySelector("canvas");
 
   if (canvas) {
     var ctx = canvas.getContext("2d");
-    const draw = designs[id];
 
-    draw(ctx, canvas.width, canvas.height, inputs);
+    if (ctx) {
+      const draw = designs[id];
+      draw(ctx, canvas.width, canvas.height, inputs);
+    }
+    
     // const img = canvas.toDataURL("image/png");
     // document.write('<img src="' + img + '"/>');
   }
 }
 
-const Design = ({ id }) => {
+const Design = ({ id }: { id: string }) => {
   const canvasProps = { width: 500, height: 500 };
 
   useEffect(() => {
     if (id && typeof id === "string") {
-      drawdesign(id, inputs[id]);
+      drawdesign(id, inputs[id])
     }
   });
 

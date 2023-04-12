@@ -1,6 +1,8 @@
 import design001 from "./design001";
 
-const designs: any = {
+export type Design = typeof design001;
+
+const designs: Record<string, Design> = {
   design001,
 };
 

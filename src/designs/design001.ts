@@ -1,9 +1,11 @@
-export default function design001(context: any, width: number, height: number, inputs: any) {
+import { InputValues } from "@/components/atoms/Design";
+
+export default function design001(context: CanvasRenderingContext2D, width: number, height: number, inputs: InputValues) {
   const invert = inputs?.invert;
 
   const mux = (width || height) / 500;
 
-  context.strokeStyle = invert ? "white" : "black";
+  context.strokeStyle = invert ? "white" : "black"
   context.fillStyle = invert ? "black" : "white";
   context.fillRect(0, 0, width, height);
   context.lineWidth = 5 * mux;

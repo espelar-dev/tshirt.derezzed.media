@@ -1,0 +1,16 @@
+.navlink {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 1000;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+}
+
+.selected {
+  background-image: linear-gradient(135deg, rgba(119,48,231,1) 0%, rgba(6,189,192,1) 100%);   
+  background-clip: text;
+  color: transparent;
+}
+
